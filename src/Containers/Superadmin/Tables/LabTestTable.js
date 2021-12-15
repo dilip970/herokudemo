@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import $ from 'jquery';
 import Navbar1 from '../Navbars/Navbar1';
 import Navbar2 from '../Navbars/Navbar2';
 import Globals from '../../../Utils/globals';
@@ -87,7 +86,7 @@ class LabTestTable extends Component
             },
 
             ).then((responseData) => {
-                if(responseData.status=="200"){
+                if(responseData.status==="200"){
                     alert("Status updated Successfully...");
                     window.location.reload();
                 }else{
@@ -113,14 +112,14 @@ class LabTestTable extends Component
                             return <tr className="gradeU">
                             <td>{++key}</td>
                             <td>{labtest.dltm_name}</td>
-                            <td><img style={style} src={Globals.DIAGNOSTICSFILES+labtest.dltm_image} /></td>
+                            <td><img style={style} src={Globals.DIAGNOSTICSFILES+labtest.dltm_image} alt=""/></td>
                             <td>{labtest.dltm_price}</td>
                             <td>{labtest.ubit_establishment_name}</td>
                             <td><select  onChange={this.changestatus} name="status" class="form-control">
-                                <option selected={labtest.dltm_status == 3 ? true : false} value={["3" , labtest.dltm_id]}>Admin Active</option>
-                                <option selected={labtest.dltm_status == 4 ? true : false} value={["4" , labtest.dltm_id]}>Admin InActive</option>
-                                <option disabled selected={labtest.dltm_status == 1 ? true : false} value={["1" , labtest.dltm_id]}>Diagnostics Active</option>
-                                <option disabled selected={labtest.dltm_status == 2 ? true : false} value={["2" , labtest.dltm_id]}>Diagnostics InActive</option>
+                                <option selected={labtest.dltm_status === 3 ? true : false} value={["3" , labtest.dltm_id]}>Admin Active</option>
+                                <option selected={labtest.dltm_status === 4 ? true : false} value={["4" , labtest.dltm_id]}>Admin InActive</option>
+                                <option disabled selected={labtest.dltm_status === 1 ? true : false} value={["1" , labtest.dltm_id]}>Diagnostics Active</option>
+                                <option disabled selected={labtest.dltm_status === 2 ? true : false} value={["2" , labtest.dltm_id]}>Diagnostics InActive</option>
                                 </select>
                             </td>
                             {/* <td><img style={style} src={Globals.RAWURL+products.category_image} /></td>

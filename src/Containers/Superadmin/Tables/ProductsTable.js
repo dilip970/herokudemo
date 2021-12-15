@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import $ from 'jquery';
 import Navbar1 from '../Navbars/Navbar1';
 import Navbar2 from '../Navbars/Navbar2';
 import Globals from '../../../Utils/globals';
@@ -89,7 +88,7 @@ class ProductsTable extends Component
             },
 
             ).then((responseData) => {
-                if(responseData.status=="200"){
+                if(responseData.status==="200"){
                     alert("Status updated Successfully...");
                 }else{
                     alert("Something went Wrong...");
@@ -114,14 +113,14 @@ class ProductsTable extends Component
                             return <tr className="gradeU">
                             <td>{++key}</td>
                             <td>{products.tpp_name}</td>
-                            <td><img style={style} src={Globals.PHARMACYFILES+products.tpp_image} /></td>
+                            <td><img style={style} src={Globals.PHARMACYFILES+products.tpp_image} alt=""/></td>
                             <td>{products.tpp_price}</td>
                             <td>{products.ubit_establishment_name}</td>
                             <td><select  onChange={this.changestatus} name="status" class="form-control">
-                                <option selected={products.tpp_status == 3 ? true : false} value={["3" , products.tpp_id]}>Admin Active</option>
-                                <option selected={products.tpp_status == 4 ? true : false} value={["4" , products.tpp_id]}>Admin InActive</option>
-                                <option disabled selected={products.tpp_status == 1 ? true : false} value={["1" , products.tpp_id]}>Pharmacist Active</option>
-                                <option disabled selected={products.tpp_status == 2 ? true : false} value={["2" , products.tpp_id]}>Pharmacist InActive</option>
+                                <option selected={products.tpp_status === 3 ? true : false} value={["3" , products.tpp_id]}>Admin Active</option>
+                                <option selected={products.tpp_status === 4 ? true : false} value={["4" , products.tpp_id]}>Admin InActive</option>
+                                <option disabled selected={products.tpp_status === 1 ? true : false} value={["1" , products.tpp_id]}>Pharmacist Active</option>
+                                <option disabled selected={products.tpp_status === 2 ? true : false} value={["2" , products.tpp_id]}>Pharmacist InActive</option>
                                 </select>
                             </td>
                             {/* <td><img style={style} src={Globals.RAWURL+products.category_image} /></td>

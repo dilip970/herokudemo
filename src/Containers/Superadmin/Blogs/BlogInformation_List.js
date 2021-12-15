@@ -46,7 +46,7 @@ class BlogInformationList extends Component
                 ubit_token : localStorage.getItem("superadmintoken")
                 
             }).then((responseData) => {
-                if(responseData.status=="200"){
+                if(responseData.status==="200"){
                     alert("Blog Information status updated successfully");
                     window.location.reload();
 
@@ -117,13 +117,13 @@ class BlogInformationList extends Component
                             <td>{++key}</td>
                             <td>{bloglist.wbim_title}</td>
                             <td>{bloglist.wbim_content}</td>
-                            <td>  <img style={style} src={Globals.BLOGFILES+bloglist.wbim_image} /></td>
+                            <td>  <img style={style} src={Globals.BLOGFILES+bloglist.wbim_image} alt=''/></td>
                             <td><a href={`/superadmin/editblog-information/${bloglist.wbim_id}`}><i class="material-icons dp48">mode_edit</i></a></td>
 
                             <td>
                                 <select onChange={this.changestatus} name="t_status" class="form-control">
-                                <option selected={bloglist.wbim_status == 1 ? true : false} value={["1" , bloglist.wbim_id]}>Active</option>
-                                <option selected={bloglist.wbim_status == 2 ? true : false} value={["2" , bloglist.wbim_id]}>InActive</option>
+                                <option selected={bloglist.wbim_status === 1 ? true : false} value={["1" , bloglist.wbim_id]}>Active</option>
+                                <option selected={bloglist.wbim_status === 2 ? true : false} value={["2" , bloglist.wbim_id]}>InActive</option>
                                 </select>
                             </td>
                         

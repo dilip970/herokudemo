@@ -90,7 +90,7 @@ class EditSpecialization extends Component
             }
         })
           .then((res) => {
-            if(res.data.status=="200"){
+            if(res.data.status==="200"){
                 alert("Specialization Updated Successfully!!");
                 window.location.href='/superadmin/specializationslist';
             }else{
@@ -129,7 +129,7 @@ class EditSpecialization extends Component
                         <input name="image" accept="image/*" onChange={this.handleFileRead} type="file"/>
                         </div>
 
-                        <img id="image" style={{width: '100px', height:'100px'}} src={this.state.image} />
+                        <img id="image" alt='' style={{width: '100px', height:'100px'}} src={this.state.image} />
                         
                         <div className="input-field col s12">
                         <input id="submit" type="submit" />

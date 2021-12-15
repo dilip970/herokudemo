@@ -62,7 +62,7 @@ class EditBlogInformation extends Component
             return axios.post(Globals.APIURL+'/save-blog-information', { ...formData })
             .then((res) => {
                 console.log(res)
-              if(res.data.status=="200"){
+              if(res.data.status==="200"){
                   alert("category name added successfully.....");
                   window.location.reload();
               }

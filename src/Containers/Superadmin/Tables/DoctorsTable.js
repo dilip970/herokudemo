@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import $ from 'jquery';
 import Navbar1 from '../Navbars/Navbar1';
 import Navbar2 from '../Navbars/Navbar2';
 import Globals from '../../../Utils/globals';
@@ -44,7 +43,7 @@ class DoctorsTable extends Component
                 ubit_token : localStorage.getItem("superadmintoken")
                 
             }).then((responseData) => {
-                if(responseData.status=="200"){
+                if(responseData.status==="200"){
                     alert("user status modified successfully");
                 }else{
                     alert("Something went Wrong...");
@@ -59,10 +58,6 @@ class DoctorsTable extends Component
         let list = this.state.doctors;
         if(this.state.doctors)
         {
-            let style = {
-                width : "100px",
-                heigth : "100px"
-            }
             let dropdownstyle = {
                 width : '100px'
             }
@@ -80,8 +75,8 @@ class DoctorsTable extends Component
                             <td>{doctor.ubit_full_address}</td>
                             <td>
                                 <select style={dropdownstyle} onChange={this.changestatus} name="ubit_status" class="form-control">
-                                <option selected={doctor.ubit_status == 1 ? true : false} value={["1" , doctor.ubit_id]}>Active</option>
-                                <option selected={doctor.ubit_status == 2 ? true : false} value={["2" , doctor.ubit_id]}>InActive</option>
+                                <option selected={doctor.ubit_status === 1 ? true : false} value={["1" , doctor.ubit_id]}>Active</option>
+                                <option selected={doctor.ubit_status === 2 ? true : false} value={["2" , doctor.ubit_id]}>InActive</option>
                                 </select>
                             </td>
                             <td><a href={`/superadmin/viewdoctor/${doctor.ubit_id}`}><i class="material-icons dp48">perm_identity</i></a></td>

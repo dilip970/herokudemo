@@ -35,7 +35,7 @@ class TestimonialTable extends Component
                 ubit_token : localStorage.getItem("superadmintoken")
                 
             }).then((responseData) => {
-                if(responseData.status=="200"){
+                if(responseData.status==="200"){
                     alert("testimonial status updated successfully");
                     window.location.reload();
 
@@ -89,8 +89,8 @@ class TestimonialTable extends Component
 
                             <td>
                                 <select onChange={this.changestatus} name="t_status" class="form-control">
-                                <option selected={testimonials.t_status == 1 ? true : false} value={["1" , testimonials.t_id]}>Active</option>
-                                <option selected={testimonials.t_status == 2 ? true : false} value={["2" , testimonials.t_id]}>InActive</option>
+                                <option selected={testimonials.t_status === 1 ? true : false} value={["1" , testimonials.t_id]}>Active</option>
+                                <option selected={testimonials.t_status === 2 ? true : false} value={["2" , testimonials.t_id]}>InActive</option>
                                 </select>
                             </td>
                         

@@ -34,131 +34,127 @@ import BlogInformationList from './Containers/Superadmin/Blogs/BlogInformation_L
 import EditBlogInformation from './Containers/Superadmin/Blogs/EditBlog_Information';
 class App extends Component
 {
-  constructor(props) 
-  {
-    super(props);
-  }
    render()
    {
      return (
       <BrowserRouter>
       <Route exact path="/superadmin/login" component={SuperAdminLogin} />
       { 
-      (localStorage.getItem('superadminid')!=null || window.location.href==Globals.APIURL+'superadmin/login') ? 
+      (localStorage.getItem('superadminid')!=null || window.location.href===Globals.APIURL+'superadmin/login') ? 
           <Route exact path="/superadmin/dashboard/:superadminid" component={SuperAdminDashboard} /> : ''
       }
       { 
-      (localStorage.getItem('superadminid')!=null || window.location.href==Globals.APIURL+'superadmin/login') ? 
+      (localStorage.getItem('superadminid')!=null || window.location.href===Globals.APIURL+'superadmin/login') ? 
           <Route exact path="/superadmin/change-password" component={ChangePassword} /> : ''
       }
       { 
-      (localStorage.getItem('superadminid')!=null || window.location.href==Globals.APIURL+'superadmin/login') ? 
+      (localStorage.getItem('superadminid')!=null || window.location.href===Globals.APIURL+'superadmin/login') ? 
           <Route exact path="/superadmin/addspecialization" component={AddSpecialization} /> : ''
       }
       { 
-      (localStorage.getItem('superadminid')!=null || window.location.href==Globals.APIURL+'superadmin/login') ? 
+      (localStorage.getItem('superadminid')!=null || window.location.href===Globals.APIURL+'superadmin/login') ? 
           <Route exact path="/superadmin/specializationslist" component={SpecializationsTable} /> : ''
       }
 
       { 
-      (localStorage.getItem('superadminid')!=null || window.location.href==Globals.APIURL+'superadmin/login') ? 
+      (localStorage.getItem('superadminid')!=null || window.location.href===Globals.APIURL+'superadmin/login') ? 
           <Route exact path="/superadmin/countrieslist" component={CountriesTable} /> : ''
       }
       { 
-      (localStorage.getItem('superadminid')!=null || window.location.href==Globals.APIURL+'superadmin/login') ? 
+      (localStorage.getItem('superadminid')!=null || window.location.href===Globals.APIURL+'superadmin/login') ? 
           <Route exact path="/superadmin/stateslist" component={StatesTable} /> : ''
       }
       { 
-      (localStorage.getItem('superadminid')!=null || window.location.href==Globals.APIURL+'superadmin/login') ? 
+      (localStorage.getItem('superadminid')!=null || window.location.href===Globals.APIURL+'superadmin/login') ? 
           <Route exact path="/superadmin/citieslist" component={CitiesTable} /> : ''
       }
       { 
-      (localStorage.getItem('superadminid')!=null || window.location.href==Globals.APIURL+'superadmin/login') ? 
+      (localStorage.getItem('superadminid')!=null || window.location.href===Globals.APIURL+'superadmin/login') ? 
           <Route exact path="/superadmin/doctorslist" component={DoctorsTable} /> : ''
       }
       { 
-      (localStorage.getItem('superadminid')!=null || window.location.href==Globals.APIURL+'superadmin/login') ? 
+      (localStorage.getItem('superadminid')!=null || window.location.href===Globals.APIURL+'superadmin/login') ? 
           <Route exact path="/superadmin/viewdoctor/:ubit_id" component={ViewDoctor} /> : ''
       }
        { 
-      (localStorage.getItem('superadminid')!=null || window.location.href==Globals.APIURL+'superadmin/login') ? 
+      (localStorage.getItem('superadminid')!=null || window.location.href===Globals.APIURL+'superadmin/login') ? 
           <Route exact path="/superadmin/viewpharmacy/:ubit_id" component={ViewPharmacy} /> : ''
       }
        { 
-      (localStorage.getItem('superadminid')!=null || window.location.href==Globals.APIURL+'superadmin/login') ? 
+      (localStorage.getItem('superadminid')!=null || window.location.href===Globals.APIURL+'superadmin/login') ? 
           <Route exact path="/superadmin/viewdiagnostics/:ubit_id" component={ViewDiagnostics} /> : ''
       }
       { 
-      (localStorage.getItem('superadminid')!=null || window.location.href==Globals.APIURL+'superadmin/login') ? 
+      (localStorage.getItem('superadminid')!=null || window.location.href===Globals.APIURL+'superadmin/login') ? 
           <Route exact path="/superadmin/editspecialization/:id" component={EditSpecialization} /> : ''
       }
         { 
-      (localStorage.getItem('superadminid')!=null || window.location.href==Globals.APIURL+'superadmin/login') ? 
+      (localStorage.getItem('superadminid')!=null || window.location.href===Globals.APIURL+'superadmin/login') ? 
           <Route exact path="/superadmin/pharmacylist" component={PharmacyTable} /> : ''
       }
       { 
-      (localStorage.getItem('superadminid')!=null || window.location.href==Globals.APIURL+'superadmin/login') ? 
+      (localStorage.getItem('superadminid')!=null || window.location.href===Globals.APIURL+'superadmin/login') ? 
           <Route exact path="/superadmin/diagnosticslist" component={DiagnosticsTable} /> : ''
       }
       { 
-      (localStorage.getItem('superadminid')!=null || window.location.href==Globals.APIURL+'superadmin/login') ? 
+      (localStorage.getItem('superadminid')!=null || window.location.href===Globals.APIURL+'superadmin/login') ? 
           <Route exact path="/superadmin/labtestlist" component={LabTestTable} /> : ''
       }
       { 
-      (localStorage.getItem('superadminid')!=null || window.location.href==Globals.APIURL+'superadmin/login') ? 
+      (localStorage.getItem('superadminid')!=null || window.location.href===Globals.APIURL+'superadmin/login') ? 
           <Route exact path="/superadmin/productslist" component={ProductsTable} /> : ''
       }
             { 
-      (localStorage.getItem('superadminid')!=null || window.location.href==Globals.APIURL+'superadmin/login') ? 
+      (localStorage.getItem('superadminid')!=null || window.location.href===Globals.APIURL+'superadmin/login') ? 
           <Route exact path="/superadmin/addrole-basedcategory" component={AddRoleBasedCategory} /> : ''
       }
 
     { 
-      (localStorage.getItem('superadminid')!=null || window.location.href==Globals.APIURL+'superadmin/login') ? 
+      (localStorage.getItem('superadminid')!=null || window.location.href===Globals.APIURL+'superadmin/login') ? 
           <Route exact path="/superadmin/categorylist-rolebased" component={CategoryListRoleBased} /> : ''
       }
             { 
-      (localStorage.getItem('superadminid')!=null || window.location.href==Globals.APIURL+'superadmin/login') ? 
+      (localStorage.getItem('superadminid')!=null || window.location.href===Globals.APIURL+'superadmin/login') ? 
           <Route exact path="/superadmin/editcategory/:rbcm_id" component={EditCategory} /> : ''
       }
             { 
-      (localStorage.getItem('superadminid')!=null || window.location.href==Globals.APIURL+'superadmin/login') ? 
+      (localStorage.getItem('superadminid')!=null || window.location.href===Globals.APIURL+'superadmin/login') ? 
           <Route exact path="/superadmin/patientlist" component={PatientTable} /> : ''
       }
     { 
-      (localStorage.getItem('superadminid')!=null || window.location.href==Globals.APIURL+'superadmin/login') ? 
+      (localStorage.getItem('superadminid')!=null || window.location.href===Globals.APIURL+'superadmin/login') ? 
           <Route exact path="/superadmin/add-testimonials" component={AddTestimonials} /> : ''
       }
           { 
-      (localStorage.getItem('superadminid')!=null || window.location.href==Globals.APIURL+'superadmin/login') ? 
+      (localStorage.getItem('superadminid')!=null || window.location.href===Globals.APIURL+'superadmin/login') ? 
           <Route exact path="/superadmin/testimonials-list" component={TestimonialTable} /> : ''
       }
        { 
-      (localStorage.getItem('superadminid')!=null || window.location.href==Globals.APIURL+'superadmin/login') ? 
+      (localStorage.getItem('superadminid')!=null || window.location.href===Globals.APIURL+'superadmin/login') ? 
           <Route exact path="/superadmin/edittestimonials/:t_id" component={EditTestimonials} /> : ''
       }
         { 
-      (localStorage.getItem('superadminid')!=null || window.location.href==Globals.APIURL+'superadmin/login') ? 
+      (localStorage.getItem('superadminid')!=null || window.location.href===Globals.APIURL+'superadmin/login') ? 
           <Route exact path="/superadmin/addblog-category" component={AddBlogCategory} /> : ''
       }
        { 
-      (localStorage.getItem('superadminid')!=null || window.location.href==Globals.APIURL+'superadmin/login') ? 
+      (localStorage.getItem('superadminid')!=null || window.location.href===Globals.APIURL+'superadmin/login') ? 
           <Route exact path="/superadmin/blogcategory-list" component={BlogCategoryTable} /> : ''
       }
      { 
-      (localStorage.getItem('superadminid')!=null || window.location.href==Globals.APIURL+'superadmin/login') ? 
+      (localStorage.getItem('superadminid')!=null || window.location.href===Globals.APIURL+'superadmin/login') ? 
           <Route exact path="/superadmin/editblog-category/:wbc_id" component={EditBlogCategory} /> : ''
       }
      { 
-      (localStorage.getItem('superadminid')!=null || window.location.href==Globals.APIURL+'superadmin/login') ? 
+      (localStorage.getItem('superadminid')!=null || window.location.href===Globals.APIURL+'superadmin/login') ? 
           <Route exact path="/superadmin/addblog-information" component={AddBlogInformation} /> : ''
       }
                 { 
-      (localStorage.getItem('superadminid')!=null || window.location.href==Globals.APIURL+'superadmin/login') ? 
+      (localStorage.getItem('superadminid')!=null || window.location.href===Globals.APIURL+'superadmin/login') ? 
           <Route exact path="/superadmin/blog-information-list" component={BlogInformationList} /> : ''
       }
          { 
-      (localStorage.getItem('superadminid')!=null || window.location.href==Globals.APIURL+'superadmin/login') ? 
+      (localStorage.getItem('superadminid')!=null || window.location.href===Globals.APIURL+'superadmin/login') ? 
           <Route exact path="/superadmin/editblog-information/:wbim_id" component={EditBlogInformation} /> : ''
       }
 

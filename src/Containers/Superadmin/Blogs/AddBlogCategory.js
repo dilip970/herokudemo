@@ -35,7 +35,7 @@ class AddBlogCategory extends Component
             return axios.post(Globals.APIURL+'/save-web-blog-category', { ...formData })
             .then((res) => {
                 console.log(res)
-              if(res.data.status=="200"){
+              if(res.data.status==="200"){
                   alert("Blog category name added successfully.....");
                   window.location.reload();
               }

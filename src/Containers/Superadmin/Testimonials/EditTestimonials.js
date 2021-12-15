@@ -59,7 +59,7 @@ class EditTestimonials extends Component
           .patch(Globals.APIURL+'/update-testimonial-by-id',{ ...formData },
           )
           .then((res) => {
-            if(res.data.status=="200"){
+            if(res.data.status==="200"){
                 alert("Testimonials Updated Successfully!!");
                 // window.location.href='/superadmin/testimonials-list';
             }else{

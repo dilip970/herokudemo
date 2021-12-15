@@ -42,7 +42,7 @@ class AddRoleBasedCategory extends Component
             return axios.post(Globals.APIURL+'/save-role-based-category', { ...formData })
             .then((res) => {
                 console.log(res)
-              if(res.data.status=="200"){
+              if(res.data.status==="200"){
                   alert("category name added successfully.....");
                   window.location.reload();
               }

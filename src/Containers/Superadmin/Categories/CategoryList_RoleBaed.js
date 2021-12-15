@@ -69,7 +69,7 @@ class CategoryListRoleBased extends Component
             },
 
             ).then((responseData) => {
-                if(responseData.status=="200"){
+                if(responseData.status==="200"){
                     alert("Status updated Successfully...");
                     window.location.reload();
                 }else{
@@ -111,8 +111,8 @@ class CategoryListRoleBased extends Component
                         <td><a href={`/superadmin/editcategory/${categories.rbcm_id}`}><i class="material-icons dp48">mode_edit</i></a></td>
                         <td>
                         <select onChange={this.changestatus} name="rbcm_status" class="form-control">
-                           <option selected={categories.rbcm_status == 1 ? true : false} value={["1" , categories.rbcm_id]}>Active</option>
-                            <option selected={categories.rbcm_status == 2 ? true : false} value={["2" , categories.rbcm_id]}>InActive</option>
+                           <option selected={categories.rbcm_status === 1 ? true : false} value={["1" , categories.rbcm_id]}>Active</option>
+                            <option selected={categories.rbcm_status === 2 ? true : false} value={["2" , categories.rbcm_id]}>InActive</option>
                          </select>
                         </td>
                      </tr>

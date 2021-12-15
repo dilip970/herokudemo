@@ -151,13 +151,13 @@ class ViewDoctor extends Component
                     
                         <div className="input-field col s6">
                         <p>Profile Photo:</p>
-                        <img style={style} src={this.state.ubit_owner_file} />
+                        <img style={style} src={this.state.ubit_owner_file} alt=''/>
                         </div>
 
                         <div className="input-field col s6">
                         <p>License Photo:</p>
                         
-                        <img style={style} src={this.state.ubit_license_file} />
+                        <img style={style} src={this.state.ubit_license_file} alt=''/>
                         </div>
 
                         

@@ -54,7 +54,7 @@ class AddSpecialization extends Component
             }
         })
           .then((res) => {
-            if(res.data.status=="200"){
+            if(res.data.status==="200"){
                 alert("Specialization Added Successfully!!");
                 window.location.href='/superadmin/addspecialization';
             }else{
@@ -89,7 +89,7 @@ class AddSpecialization extends Component
                         </div>
                     
                         <div className="input-field col s12">
-                        <input name="em_image" required accept="image/*" onChange={this.handleFileRead} required type="file"/>
+                        <input name="em_image" required accept="image/*" onChange={this.handleFileRead}  type="file"/>
                         </div>
                         
                         <div className="input-field col s12">

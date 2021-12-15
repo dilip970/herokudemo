@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import Navbar1 from '../Navbars/Navbar1';
 import Navbar2 from '../Navbars/Navbar2';
-import EditSpecializationHeader from '../Headers/EditSpecializationHeader';
 import Globals from '../../../Utils/globals';
 import CommonTableHeader from '../Headers/CommonHeader';
 
@@ -61,7 +60,7 @@ class EditCategory extends Component
           // rbcm_role_id = this.props.match.params.rbcm_role_id
           )
           .then((res) => {
-            if(res.data.status=="200"){
+            if(res.data.status==="200"){
                 alert("category Updated Successfully!!");
                 // window.location.href='/superadmin/categorylist-rolebased';
             }else{
@@ -100,7 +99,7 @@ class EditCategory extends Component
                         <input name="image" accept="image/*" onChange={this.handleFileRead} type="file"/>
                         </div>
 
-                        <img id="image" style={{width: '100px', height:'100px'}} src={this.state.image} />
+                        <img id="image" style={{width: '100px', height:'100px'}}  alt='' src={this.state.image} />
                         
                         <div className="input-field col s12">
                         <input id="submit" type="submit" />

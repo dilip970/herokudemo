@@ -35,7 +35,7 @@ class BlogCategoryTable extends Component
                 ubit_token : localStorage.getItem("superadmintoken")
                 
             }).then((responseData) => {
-                if(responseData.status=="200"){
+                if(responseData.status==="200"){
                     alert("Blog Category status updated successfully");
                     window.location.reload();
 
@@ -89,8 +89,8 @@ class BlogCategoryTable extends Component
 
                             <td>
                                 <select onChange={this.changestatus} name="wbc_status" class="form-control">
-                                <option selected={b.wbc_status == 1 ? true : false} value={["1" , b.wbc_id]}>Active</option>
-                                <option selected={b.wbc_status == 2 ? true : false} value={["2" , b.wbc_id]}>InActive</option>
+                                <option selected={b.wbc_status === 1 ? true : false} value={["1" , b.wbc_id]}>Active</option>
+                                <option selected={b.wbc_status === 2 ? true : false} value={["2" , b.wbc_id]}>InActive</option>
                                 </select>
                             </td>
                         

@@ -51,7 +51,7 @@ class AddBlogInformation extends Component
             return axios.post(Globals.APIURL+'/save-blog-information', { ...formData })
             .then((res) => {
                 console.log(res)
-              if(res.data.status=="200"){
+              if(res.data.status==="200"){
                   alert("Blog Information added successfully.....");
                   window.location.reload();
               }

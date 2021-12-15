@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import $ from 'jquery';
 import Navbar1 from '../Navbars/Navbar1';
 import Navbar2 from '../Navbars/Navbar2';
 import Globals from '../../../Utils/globals';
@@ -46,7 +45,7 @@ class PharmacyTable extends Component
                 ubit_token : localStorage.getItem("superadmintoken")
                 
             }).then((responseData) => {
-                if(responseData.status=="200"){
+                if(responseData.status==="200"){
                     alert("user status modified successfully");
                 }else{
                     alert("Something went Wrong...");
@@ -61,10 +60,6 @@ class PharmacyTable extends Component
         let list = this.state.pharmacy;
         if(this.state.pharmacy)
         {
-            let style = {
-                width : "100px",
-                heigth : "100px"
-            }
             let dropdownstyle = {
                 width : '100px'
             }
@@ -81,8 +76,8 @@ class PharmacyTable extends Component
                             <td></td>
                             <td>
                                 <select style={dropdownstyle} onChange={this.changestatus} name="status" class="form-control">
-                                <option selected={pharmacy.ubit_status == 1 ? true : false} value={["1" , pharmacy.ubit_id]}>Active</option>
-                                <option selected={pharmacy.ubit_status == 2 ? true : false} value={["2" , pharmacy.ubit_id]}>InActive</option>
+                                <option selected={pharmacy.ubit_status === 1 ? true : false} value={["1" , pharmacy.ubit_id]}>Active</option>
+                                <option selected={pharmacy.ubit_status === 2 ? true : false} value={["2" , pharmacy.ubit_id]}>InActive</option>
                                 </select>
                             </td>
                             <td><a href={`/superadmin/viewpharmacy/${pharmacy.ubit_id}`}><i class="material-icons dp48">perm_identity</i></a></td>

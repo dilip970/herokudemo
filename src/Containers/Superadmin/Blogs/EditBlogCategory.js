@@ -54,7 +54,7 @@ class EditBlogCategory extends Component
           )
           .then((res) => {
               console.log(res)
-            if(res.data.status=="200"){
+            if(res.data.status==="200"){
                 alert("Blog Category Updated Successfully!!");
                 // window.location.href='/superadmin/testimonials-list';
             }else{

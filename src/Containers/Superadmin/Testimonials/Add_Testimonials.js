@@ -29,7 +29,7 @@ class AddTestimonials extends Component
   handleSubmit = e=>{
       e.preventDefault();
       
-      const {ubit_role_id,t_name,t_designation,t_description} = this.state;
+      const {t_name,t_designation,t_description} = this.state;
       var formData ={
         ubit_role_id :'1',
         t_name,
@@ -41,7 +41,7 @@ class AddTestimonials extends Component
             return axios.post(Globals.APIURL+'/save-testimonial', { ...formData })
             .then((res) => {
                 console.log(res)
-              if(res.data.status=="200"){
+              if(res.data.status==="200"){
                   alert("testimonial added successfully");
                   window.location.reload();
               }

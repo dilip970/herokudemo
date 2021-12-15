@@ -32,12 +32,12 @@ class ChangePassword extends Component
           ubit_id,
           ubit_token : localStorage.getItem("superadmintoken")
         };
-        if(passwords.ubit_new_password!=passwords.ubit_confirmpassword)
+        if(passwords.ubit_new_password!==passwords.ubit_confirmpassword)
         {
             alert("confirm Password should be same with New password!!");
             return false;
         }
-        else if(passwords.ubit_new_password==passwords.ubit_old_password){
+        else if(passwords.ubit_new_password===passwords.ubit_old_password){
           alert("New Password do not match with old password!!");
           return false;
         };
@@ -47,7 +47,7 @@ class ChangePassword extends Component
           .post(Globals.APIURL+'/change-password/', { ...passwords })
           .then((res) => {
               console.log(res);
-            if(res.data.status=="200"){
+            if(res.data.status==="200"){
               this.setState({
                 am_passwordChanged : "1",
                 message : 'Password Changed Successfully...'
@@ -79,10 +79,10 @@ class ChangePassword extends Component
                     Change Password Form
                 </div>
                 {
-                    (this.state.am_passwordChanged==2) ? <div class="alert alert-warning">
+                    (this.state.am_passwordChanged===2) ? <div class="alert alert-warning">
                     {this.state.message}
                     </div> 
-                    : (this.state.am_passwordChanged==1) ? <div class="alert alert-success">
+                    : (this.state.am_passwordChanged===1) ? <div class="alert alert-success">
                     {this.state.message}
                     </div> 
                     : ''

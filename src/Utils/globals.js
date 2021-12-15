@@ -2,7 +2,6 @@ const globalNames =
 {
 
   APIURL:'http://128.199.28.150:5000/api',
-  APIURL : 'http://128.199.28.150:5000/api',
   // APIURL : 'http://127.0.0.1:5000/api',
   RAWURL : 'http://128.199.28.150:5000',
   superadminlogout : function logout(e){

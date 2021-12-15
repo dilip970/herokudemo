@@ -55,7 +55,7 @@ class Login extends Component
   };
     render()
     {
-      if(localStorage.getItem('superadminid')==this.state.superadminid)
+      if(localStorage.getItem('superadminid')===this.state.superadminid)
       {
         window.location.href = '/superadmin/dashboard/'+this.state.superadminid;
       }

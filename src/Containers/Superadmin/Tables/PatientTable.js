@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import $ from 'jquery';
 import Navbar1 from '../Navbars/Navbar1';
 import Navbar2 from '../Navbars/Navbar2';
 import Globals from '../../../Utils/globals';
@@ -41,7 +40,7 @@ class PatientTable extends Component
                     Authorization : 'Bearer '+localStorage.getItem("superadmintoken")
                 }
             }).then((responseData) => {
-                if(responseData.status=="200"){
+                if(responseData.status==="200"){
                     alert("Status updated Successfully...");
                     window.location.reload();
                 }else{
@@ -57,13 +56,8 @@ class PatientTable extends Component
         let list = this.state.patient;
         if(this.state.patient)
         {
-            let style = {
-                width : "100px",
-                heigth : "100px"
-            }
-            let dropdownstyle = {
-                width : '100px'
-            }
+
+
             list = (
                 <tbody>
                     {

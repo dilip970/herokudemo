@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import $ from 'jquery';
 import Navbar1 from '../Navbars/Navbar1';
 import Navbar2 from '../Navbars/Navbar2';
 import SpecializationTableHeader from '../Headers/SpecializationTableHeader';
@@ -44,7 +43,7 @@ class SpecializationsTable extends Component
                     Authorization : 'Bearer '+localStorage.getItem("superadmintoken")
                 }
             }).then((responseData) => {
-                if(responseData.status=="200"){
+                if(responseData.status==="200"){
                     alert("Status updated Successfully...");
                     window.location.reload();
                 }else{
@@ -76,7 +75,7 @@ class SpecializationsTable extends Component
     }
     render()
     {
-        if(this.state.edit==true){
+        if(this.state.edit===true){
             return (<EditSpecialization sdata={this.state.editspecialization}/>);
         }else{
             let list = this.state.specializations;
@@ -93,11 +92,11 @@ class SpecializationsTable extends Component
                             return <tr className="gradeU">
                             <td>{++key}</td>
                             <td>{specialization.specialization}</td>
-                            <td><img style={style} src={Globals.RAWURL+specialization.image} /></td>
+                            <td><img style={style} src={Globals.RAWURL+specialization.image} alt=""/></td>
                             <td><a href={`/superadmin/editspecialization/${specialization.id}`}><i class="material-icons dp48">mode_edit</i></a></td>
                             <td><select onChange={this.changestatus} name="status" class="form-control">
-                                <option selected={specialization.status == 1 ? true : false} value={["1" , specialization.id]}>Active</option>
-                                <option selected={specialization.status == 0 ? true : false} value={["0" , specialization.id]}>InActive</option>
+                                <option selected={specialization.status === 1 ? true : false} value={["1" , specialization.id]}>Active</option>
+                                <option selected={specialization.status === 0 ? true : false} value={["0" , specialization.id]}>InActive</option>
                                 </select></td>
                             </tr>
                         })
