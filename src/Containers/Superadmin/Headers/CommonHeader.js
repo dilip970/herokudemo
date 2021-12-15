@@ -21,7 +21,7 @@ class CommonTableHeader extends Component
                     {this.state.pageTitle}
                 </h1>
                 <ol className="breadcrumb">
-                    <li><a href="#">Home</a></li>
+                    <li><a href="/#">Home</a></li>
                     <li className="active">{this.state.pageTitle}</li>
                     
                 </ol> 					

@@ -24,7 +24,7 @@ class Navbar1 extends Component
                 <ul id="dropdown1" className="dropdown-content">
                 <li><a href="/superadmin/change-password"><i className="fa fa-gear fa-fw" /> Change Password</a>
                 </li> 
-                <li><a onClick={(e) => Globals.superadminlogout(e)} href="#"><i className="fa fa-sign-out fa-fw" /> Logout</a>
+                <li><a onClick={(e) => Globals.superadminlogout(e)} href="/#"><i className="fa fa-sign-out fa-fw" /> Logout</a>
                 </li>
                 </ul>
             </div>

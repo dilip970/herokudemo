@@ -9,8 +9,8 @@ class EditSpecializationHeader extends Component
                     Edit Specialization
                 </h1>
                 <ol className="breadcrumb">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Edit Specialization</a></li>
+                    <li><a href="/#">Home</a></li>
+                    <li><a href="/#">Edit Specialization</a></li>
                     <li className="active">Form</li>
                 </ol> 					
             </div>

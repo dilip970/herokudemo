@@ -9,8 +9,8 @@ class EmployeesTableHeader extends Component
                     Specializations List
                 </h1>
                 <ol className="breadcrumb">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Employees</a></li>
+                    <li><a href="/#">Home</a></li>
+                    <li><a href="/#">Employees</a></li>
                     <li className="active">Data</li>
                 </ol> 					
             </div>
