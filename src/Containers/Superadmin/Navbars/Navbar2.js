@@ -13,7 +13,7 @@ class Navbar2 extends Component
                     </li>
 
                     <li>
-                        <a href="javascript:void(0)" className="waves-effect waves-dark"><i className="fa fa-globe"></i> Locations<span class="fa arrow"></span></a>
+                        <a  className="waves-effect waves-dark"><i className="fa fa-globe"></i> Locations<span class="fa arrow"></span></a>
                         <ul className="nav nav-second-level collapse">
                             <li>
                                 <a href="/superadmin/countrieslist">Countries List</a>
@@ -28,7 +28,7 @@ class Navbar2 extends Component
                     </li>
 
                     <li>
-                        <a href="javascript:void(0)" className="waves-effect waves-dark"><i className="fa fa-book"></i> Categories<span class="fa arrow"></span></a>
+                        <a className="waves-effect waves-dark"><i className="fa fa-book"></i> Categories<span class="fa arrow"></span></a>
                         <ul className="nav nav-second-level collapse">
                             <li>
                                 <a href="/superadmin/addrole-basedcategory">Add Category</a>
@@ -40,7 +40,7 @@ class Navbar2 extends Component
                     </li>
                     
                     <li>
-                        <a href="javascript:void(0)" className="waves-effect waves-dark"><i className="fa fa-user"></i> Doctors<span class="fa arrow"></span></a>
+                        <a className="waves-effect waves-dark"><i className="fa fa-user"></i> Doctors<span class="fa arrow"></span></a>
                         <ul className="nav nav-second-level collapse">
                             <li>
                                 <a href="/superadmin/doctorslist">Doctors List</a>
@@ -49,7 +49,7 @@ class Navbar2 extends Component
                     </li>
 
                     <li>
-                        <a href="javascript:void(0)" className="waves-effect waves-dark"><i className="fa fa-plus-square"></i> Pharmacists<span class="fa arrow"></span></a>
+                        <a  className="waves-effect waves-dark"><i className="fa fa-plus-square"></i> Pharmacists<span class="fa arrow"></span></a>
                         <ul className="nav nav-second-level collapse">
                             
                             <li>
@@ -61,7 +61,7 @@ class Navbar2 extends Component
                         </ul>
                     </li>
                     <li>
-                        <a href="javascript:void(0)" className="waves-effect waves-dark"><i className="fa fa-flask"></i> Diagnostics <span class="fa arrow"></span></a>
+                        <a  className="waves-effect waves-dark"><i className="fa fa-flask"></i> Diagnostics <span class="fa arrow"></span></a>
                         <ul className="nav nav-second-level collapse">
                             
                             <li>
@@ -76,7 +76,7 @@ class Navbar2 extends Component
                         <a href="/superadmin/patientlist" className="waves-effect waves-dark"><i className="fa fa-users" /> Patient List</a>
                     </li>
                     <li>
-                        <a href="javascript:void(0)" className="waves-effect waves-dark"><i className="fa fa-tag"></i> Testimonials <span class="fa arrow"></span></a>
+                        <a  className="waves-effect waves-dark"><i className="fa fa-tag"></i> Testimonials <span class="fa arrow"></span></a>
                         <ul className="nav nav-second-level collapse">
                             
                             <li>
@@ -89,7 +89,7 @@ class Navbar2 extends Component
                     </li>
     
                     <li>
-                        <a href="javascript:void(0)" className="waves-effect waves-dark"><i className="fa fa-cogs"></i> Blogs<span class="fa arrow"></span></a>
+                        <a  className="waves-effect waves-dark"><i className="fa fa-cogs"></i> Blogs<span class="fa arrow"></span></a>
                         <ul className="nav nav-second-level collapse">
                             <li>
                                 <a href="/superadmin/addblog-category">Add Blog Category</a>
